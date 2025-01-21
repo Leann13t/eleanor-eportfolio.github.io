@@ -1,0 +1,312 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>My Projects</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<style>
+		.wrapper {
+			background-color: white; /* Set the background to white */
+		}
+	
+		#main {
+			display: flex;
+			flex-direction: column;
+			align-items: center; /* Center all children (post-container) horizontally */
+			justify-content: flex-start; /* Align children at the top */
+			width: 100%;
+
+		}
+	
+		/* Title above the post containers */
+		.project-title {
+			text-align: center; /* Center the text */
+			margin-bottom: 40px; /* Space below the title */
+			width: 100%;
+		}
+	
+		.project-title h1 {
+			font-size: 2em; /* Larger title font size */
+			color: #2c3e50; /* Dark color for the title */
+			margin-bottom: 10px;
+			
+		}
+	
+		.project-title p {
+			font-size: 2em; /* Paragraph font size */
+			color: #7f8c8d; /* Subtle gray for the paragraph */
+			font-family: 'Times New Roman', Times, serif;
+			text-align: center;
+		}
+	
+		/* Fancy Post Container without color */
+		.post-container {
+			border: 1px solid #ddd; /* Subtle light gray border */
+			padding: 20px; /* Padding inside the container */
+			border-radius: 12px; /* Rounded corners */
+			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+			margin: 30px 0; /* Increased margin to prevent posts from being too close to each other */
+			max-width: 700px; /* Reduced width for smaller container */
+			width: 100%;
+			display: flex;
+			flex-direction: column;
+			align-items: center; /* Center the contents of the post container */
+			transition: transform 0.3s ease-in-out; /* Smooth hover transition */
+		
+		}
+	
+		/* Hover effect for the container */
+		.post-container:hover {
+			transform: translateY(-2px); /* Lift the container on hover */
+		}
+	
+		.post-container header {
+			text-align: center;
+			margin-bottom: 15px; /* Reduced margin between header and image */
+		}
+	
+		.post-container img {
+			display: block;
+			max-width: 50%; /* Smaller image size */
+			height: auto;
+			margin: 0 auto 15px; /* Reduced margin between image and text */
+			border-radius: 10px; /* Smaller rounded corners */
+			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Slight shadow for image */
+			transition: transform 0.3s ease-in-out; /* Image hover effect */
+		}
+	
+		.post-container img:hover {
+			transform: scale(1.05); /* Slight zoom effect on hover */
+		}
+	
+		.post-container h2 {
+			color: black; /* Changed text color to black */
+			font-size: 1.6em; /* Smaller font size */
+			font-family: 'Arial', sans-serif;
+			margin-bottom: 12px; /* Reduced margin between title and buttons */
+		}
+	
+		/* Button container to make buttons side by side */
+		.button-container {
+			display: flex;
+			justify-content: center; /* Center the buttons horizontally */
+			gap: 15px; /* Reduced space between buttons */
+			width: 100%; /* Ensure the container takes the full width */
+		}
+	
+		/* Button styles */
+		.post-container button {
+			display: inline-flex; /* Ensure it's a flex container */
+			align-items: center; /* Vertically center the text */
+			justify-content: center; /* Horizontally center the text */
+			text-align: center; /* Center-align text */
+			padding: 10px 20px; /* Reduced padding for smaller buttons */
+			border: 2px solid #fff; /* White border */
+			border-radius: 25px; /* Rounded corners for a sleek look */
+			background-color: rgba(255, 255, 255, 0.2); /* Transparent white background */
+			color: white;
+			font-size: 0.9em; /* Slightly smaller font */
+			font-weight: bold;
+			cursor: pointer; /* Make it look clickable */
+			transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+		}
+	
+		/* Button hover effect */
+		.post-container button:hover {
+			background-color: rgba(255, 255, 255, 0.4); /* Lighten on hover */
+			transform: translateY(-2px); /* Slight lift on hover */
+		}
+	
+		/* PDF Container */
+		#pdfContainer {
+			margin-top: 20px;
+			display: flex;
+			justify-content: center; /* Center the iframe horizontally */
+			align-items: center; /* Center vertically if height is specified */
+			width: 100%;
+			height: 400px;
+			text-align: center;
+		}
+	
+		#pdfViewer {
+			border: none;
+			max-width: 100%;
+			max-height: 100%;
+		}
+
+	</style>
+	
+	<body class="is-preload">
+		<div id="wrapper">
+			<!-- Header -->
+			<header id="header">
+				<a href="index.html" class="logo">Explore</a>
+			</header>
+	
+			<!-- Nav -->
+			<nav id="nav">
+				<ul class="links">
+					<li><a href="index.html">About Me</a></li>
+					<li class="active">
+						<a href="generic.html">My Projects</a></li>
+					<li><a href="elements.html">Reflection</a></li>
+				</ul>
+				<ul class="icons">
+					<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+					<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+					<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+					<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+				</ul>
+			</nav>
+	
+			<!-- Main -->
+			<div id="main">
+				<!-- Title Section-->
+				<div class="project-title">
+					<h1>TECHNOLOGY AND INFORMATION SYSTEM</h1>
+					<p></p>
+				</div>
+			
+				<div class="post-container">
+					<header>
+						<img src="airasia talk.jpg" alt="Airasia Webinar">
+						<h2>Assignment 1 - Airasia Industry Webinar</h2>
+					</header>
+					<button onclick="viewPDF1()">View PDF</button>
+					<button onclick="downloadPDF1()">Download PDF</button>
+					<div id="pdfContainer1" style="margin-top: 20px;">
+						<iframe id="pdfViewer1" width="600" height="400" style="display:none;"></iframe>
+					</div>
+				</div>
+				
+				<div class="post-container">
+					<header>
+						<img src="PHYSICOVERY logo.png" alt="Physicovery Logo">
+						<h2>Design Thinking Report - Physicovery</h2>
+					</header>
+					<button onclick="viewPDF2()">View PDF</button>
+					<button onclick="downloadPDF2()">Download PDF</button>
+					<div id="pdfContainer2" style="margin-top: 20px;">
+						<iframe id="pdfViewer2" width="600" height="400" style="display:none;"></iframe>
+					</div>
+				</div>
+
+				<div class="post-container">
+					<header>
+						<img src="industry talk.jpg" alt="talk">
+						<img src="industry talk2.jpg" alt="talk2">
+						<h2>Assignment 3: Academic Writing on Industry Talk</h2>
+					</header>
+					<button onclick="viewPDF3()">View PDF</button>
+					<button onclick="downloadPDF3()">Download PDF</button>
+					<div id="pdfContainer3" style="margin-top: 20px;">
+						<iframe id="pdfViewer3" width="600" height="400" style="display:none;"></iframe>
+					</div>
+				</div>
+<!-- Design Thinking Video Section -->
+<div class="post-container">
+    <header>
+        <h2>Design Thinking Video</h2>
+    </header>
+	<div id="videoContainer1" style="margin-top: 20px;">
+        <iframe 
+            src="https://drive.google.com/file/d/1eaC7TZ2Wnt-1FUlJSS3jPz2pTVr24xZG/preview" 
+            width="600" 
+            height="400" 
+            allow="autoplay" 
+            style="border: none;">
+        </iframe>
+    </div>
+</div>
+
+<!-- Assignment 2: Industry Visit Video Section -->
+<div class="post-container">
+    <header>
+        <h2>Assignment 2: Industry Visit</h2>
+    </header>
+    <div id="videoContainer2" style="margin-top: 20px;">
+        <iframe width="600" height="400" 
+            src="https://www.youtube.com/embed/Da6aufK2FCE" 
+            title="YouTube Video Player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+        </iframe>
+    </div>
+</div>
+
+<!-- Return Button -->
+<br>
+    <button onclick="window.location.href='generic.html';" 
+            style="display: inline-flex; align-items: center; justify-content: center; text-align: center; padding: 10px 20px; border: 2px solid #fff; border-radius: 25px; 
+			background-color: rgba(255, 255, 255, 0.2); color: white; font-size: 0.9em; font-weight: bold; cursor: pointer; transition: background-color 0.3s ease, 
+			transform 0.3s ease;">
+        Return
+    </button>
+</div>
+
+			
+				<script>
+					// Airasia Webinar PDF
+					function viewPDF1() {
+						const iframe = document.getElementById('pdfViewer1');
+						iframe.style.display = 'block';
+						iframe.src = 'assets/pdf/TIS%20Assignment%201%20Poster.pdf';
+					}
+				
+					function downloadPDF1() {
+						const link = document.createElement('a');
+						link.href = 'assets/pdf/TIS%20Assignment%201%20Poster.pdf';
+						link.download = 'TIS_Assignment_1-Poster.pdf';
+						link.click();
+					}
+				
+					// Physicovery Report PDF
+					function viewPDF2() {
+						const iframe = document.getElementById('pdfViewer2');
+						iframe.style.display = 'block';
+						iframe.src = 'assets/pdf/Design%20Thinking%20TIS%20Group%201.pdf';
+					}
+				
+					function downloadPDF2() {
+						const link = document.createElement('a');
+						link.href = 'assets/pdf/Design%20Thinking%20TIS%20Group%201.pdf';
+						link.download = 'TIS_Design_Thinking_Report.pdf';
+						link.click();
+					}
+
+					//Industry Talk PDF
+					function viewPDF3() {
+						const iframe = document.getElementById('pdfViewer3');
+						iframe.style.display = 'block';
+						iframe.src = 'assets/pdf/TIS%20Assignment%203%20Industry%20Talk%202%20Group%201.pdf';
+                     }
+				
+					function downloadPDF3() {
+						const link = document.createElement('a');
+						link.href = 'assets/pdf/TIS%20Assignment%203%20Industry%20Talk%202%20Group%201.pdf';
+						link.download = 'Academic_Writing:_Industry_Talk.pdf';
+						link.click();
+					}
+					
+				</script>
+				
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

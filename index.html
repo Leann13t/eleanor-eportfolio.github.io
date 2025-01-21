@@ -1,0 +1,372 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+<head>
+    <title>Lean Space</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&family=GFS+Neohellenic:ital,wght@0,400;0,700;1,400;1,700&family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+    <style>
+     
+        #my\ profile {
+            width: 50%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .box-wrapper {
+            display: flex;
+            justify-content: center;
+        }
+
+        .box {
+            width: 500px;
+            padding: 22px 30px;
+            line-height: 1.8;
+            background: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        article {
+            background: #ffffff;
+            margin-bottom: 20px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .topic p.p2 {
+            font-family: "Nanum Pen Script", cursive;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 30px;
+            color: #333;
+            text-align: justify;
+        }
+
+        .content {
+            display: none;
+        }
+
+	.button {
+    display: inline-flex; /* Ensure it's a flex container */
+    align-items: center; /* Vertically center the text */
+    justify-content: center; /* Horizontally center the text */
+    text-align: center; /* Center-align text */
+    padding: 10px 20px; /* Add padding for spacing */
+    
+    border: 1px solid #000; /* Add border styling if needed */
+    background-color: transparent; /* Transparent background for this example */
+    cursor: pointer; /* Make it look clickable */
+}
+
+
+        .button-center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 10px;
+        }
+
+		.image-box {
+    padding: 20px;
+    display: flex;
+    justify-content: center; /* This centers the content inside the box */
+    overflow: hidden;
+	gap:10px;
+}
+
+.image.fit {
+    display: flex;
+    justify-content: center; /* Center the content inside .fit */
+}
+
+.image.fit img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 5px;
+    margin: 0 auto; /* Center the image horizontally */
+    display: block; /* Ensure the image is treated as a block-level element */
+}
+
+    </style>
+    <script>
+        function toggleContent(button, contentId) {
+            const content = document.getElementById(contentId);
+            const buttonElement = document.getElementById(button);
+            
+            if (content.style.display === "none" || content.style.display === "") {
+                content.style.display = "block";
+                buttonElement.style.display = "none";
+            } else {
+                content.style.display = "none";
+                buttonElement.style.display = "inline-block";
+            }
+        }
+    </script>
+</head>
+<body class="is-preload">
+    <!-- Wrapper -->
+    <div id="wrapper" class="fade-in">
+
+        <!-- Intro -->
+        <div id="intro">
+            <h1>Welcome to<br />Lean Space</h1>
+            <p>Hi! My name is Eleanor. Currently, I am a Year 1 Computer Science student studying in UTM.</p>
+            <ul class="actions">
+                <li><a href="#header" class="button">Continue</a></li>
+            </ul>
+        </div>
+
+        <!-- Header -->
+        <header id="header">
+            <a href="index.html" class="logo">Explore</a>
+        </header>
+
+        <!-- Nav -->
+        <nav id="nav">
+            <ul class="links">
+                <li class="active"><a href="index.html">About Me</a></li>
+                <li><a href="generic.html">My Projects</a></li>
+                <li><a href="elements.html">Reflection</a></li>
+            </ul>
+            <ul class="icons">
+                <li><a href="#" class="icon brands fa-twitter"></a></li>
+                <li><a href="#" class="icon brands fa-facebook-f"></a></li>
+                <li><a href="#" class="icon brands fa-instagram"></a></li>
+                <li><a href="#" class="icon brands fa-github"></a></li>
+            </ul>
+        </nav>
+
+        <!-- Main -->
+        <div id="main">
+
+            <!-- Featured Post -->
+            <article class="post featured">
+                <header class="major">
+                    <span class="date">Since April 13, 2005</span>
+                    <h2>Discover</h2>
+                </header>
+                <img src="pic my.jpg" id="my profile" alt="My Profile" />
+                <div class="box-wrapper">
+                    <div class="box">
+                        <p>Hey there! 😊 Thanks for dropping by my profile! I'm so excited to have you here. Scroll down to catch my latest updates, thoughts, and daily adventures. Stay tuned and let's connect!</p>
+                        <div class="button-center">
+                            <a id="know-more-btn" href="javascript:void(0);" class="button" onclick="toggleContent('know-more-btn', 'profile-details')">Know More</a>
+                        </div>
+                        <div id="profile-details" class="content">
+                            <p class="p2">I’d like to take a moment to highlight my profile photo, which features me wearing a traditional Hanfu during the opening gathering of the UTM Hanfu Club. It was an exciting new experience for me, and that’s why I chose this special picture as my profile photo.</p>
+                            <div class="button-center">
+                                <a href="javascript:void(0);" class="button" onclick="toggleContent('know-more-btn', 'profile-details')">Hide</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Posts -->
+            <section class="posts">
+                <article>
+                    <header>
+                        <span class="date">20 October 2024</span>
+                        <h2>My First PC Maintenance Lab</h2>
+                    </header>
+                    <div class="image-box">
+                        <a href="#" class="image fit"><img src="pc assemble img1.jpg" alt="PC Image 1" /></a>
+                        <a href="#" class="image fit"><img src="pc assemble img2.jpg" alt="PC Image 2" /></a>
+                    </div>
+                    <p>On 20/10 (Sunday), I had the opportunity to gain firsthand experience under the guidance of my lecturer, Prof. Dr. Azurah binti Abu Samah, and the lab assistants.</p>
+                    <div class="button-center">
+                        <a id="pc-lab-btn" href="javascript:void(0);" class="button" onclick="toggleContent('pc-lab-btn', 'pc-lab-details')">Full Story</a>
+                    </div>
+                    <div id="pc-lab-details" class="content">
+                        <p>I learned how to take apart a PC and see what is inside. I got to see all the components, such as the hard disk, CPU fan, CPU, and power supply, and it was quite a new experience for me, as I had never seen them with my own eyes before. 
+                        I felt so excited and accomplished to learn new and useful things today! Perhaps one day I will be able to fix my PC hardware on my own. 😁</p>
+                        <div class="button-center">
+                            <a href="javascript:void(0);" class="button" onclick="toggleContent('pc-lab-btn', 'pc-lab-details')">Hide</a>
+                        </div>
+                    </div>
+                </article>
+
+				<article>
+					<header>
+						<span class="date">25 & 26 October 2024</span>
+						<h2>Robocon <br />Basic Workshop</h2>
+					</header>
+					<div class="image-box">
+						<a href="#" class="image fit"><img src="robocon workshop1.jpg" alt="Workshop Image 1" /></a>
+						<a href="#" class="image fit"><img src="robocon workshop2.jpg" alt="Workshop Image 2" /></a>
+					</div>
+					<p>On the 25th and 26th of October, I attended a Robotics Basics Workshop organized by the Robocon Club at UTM. During this two-day workshop, I gained valuable knowledge in mechanisms, electronics, and programming skills.</p>
+					<div class="button-center">
+						<a id="workshop-btn" href="javascript:void(0);" class="button" onclick="toggleContent('workshop-btn', 'workshop-details')">Full Story</a>
+					</div>
+					<div id="workshop-details" class="content">
+						<p>Additionally, the workshop included insightful presentations on basic mechanical hardware, tools, techniques, and the functionality of various electrical and electronic components. 
+						   I also had the opportunity to explore programming concepts and learn the fundamentals of the C programming language, which is widely used in robotics. 
+						   This enriching experience not only deepened my understanding of robotics but also equipped me with practical skills to apply in future projects.</p>
+						<div class="button-center">
+							<a id="workshop-hide-btn" href="javascript:void(0);" class="button" onclick="toggleContent('workshop-btn', 'workshop-details')">Hide</a>
+						</div>
+					</div>					
+				</article>
+				
+				<article>
+					<header>
+						<span class="date">10 November 2024</span>
+						<h2>Industry Webinar: <br />A Day in the Life of a Software Engineer</h2>
+					</header>
+					<div class="image-box">
+						<a href="#" class="image fit"><img src="airasia slide.jpg" alt="AirAsia Talk" /></a>
+						<a href="#" class="image fit"><img src="speaker.jpg" alt="AirAsia Talk"/></a>
+					</div>
+					<p>On November 10th, I was assigned to watch a recorded webinar from AirAsia titled "A Day in the Life of a Software Engineer." 
+					This insightful session explored AirAsia's contributions to the community, particularly its efforts in addressing real-life challenges during the COVID-19 pandemic, while highlighting the essential skills needed to excel in the workplace.</p>
+					<div class="button-center">
+						<a id="airasia-btn" href="javascript:void(0);" class="button" onclick="toggleContent('airasia-btn', 'airasia-details')">Full Story</a>
+					</div>
+					<div id="airasia-details" class="content">
+						<p>The webinar covered key aspects of AirAsia's innovative services, including the development of its Super App and business ventures in education, entrepreneurship, e-commerce, and lifestyle. 
+							The speakers, Mr. Shardul and Mr. Danial, who are software engineers at AirAsia, shared inspiring insights about the company’s work culture, their experiences with remote work (WFH), and tips for securing internship opportunities with the organization. This session provided a comprehensive understanding of AirAsia's forward-thinking approach and the dynamic role of software engineers in driving innovation.</p>
+						<div class="button-center">
+							<a id="airasia-hide-btn" href="javascript:void(0);" class="button" onclick="toggleContent('airasia-btn', 'airasia-details')">Hide</a>
+						</div>
+					</div>					
+				</article>
+
+				<article>
+					<header>
+						<span class="date">12 November 2024</span>
+						<h2>Celcom Digi <br />Innovative Talk</h2>
+					</header>
+					<div class="image-box">
+						<div class="image fit">
+							<a href="#">
+								<img src="celcom digi sharing.jpg" alt="Celcom Digi Talk" />
+							</a>
+						</div>
+					</div>
+					<p>On November 12th, I attended an afternoon talk organized by the Celcom Digital Team titled "Learn About Innovation from Industry Leaders." During this three-hour session, the speaker provided an engaging overview of Celcom Digi’s mobile plans and shared insights into the company’s operations.</p>
+					<div class="button-center">
+						<a id="celcomdigi-btn" href="javascript:void(0);" class="button" onclick="toggleContent('celcomdigi-btn', 'celcomdigi-details')">Full Story</a>
+					</div>
+					<div id="celcomdigi-details" class="content">
+						<p>The speaker introduced open recruitment opportunities for internships, particularly for fresh graduates, offering valuable guidance for those aspiring to join the company. 
+							This session was an inspiring glimpse into the innovative practices and opportunities at Celcom Digi.</p>
+						<div class="button-center">
+							<a id="celcomdigi-hide-btn" href="javascript:void(0);" class="button" onclick="toggleContent('celcomdigi-btn', 'celcomdigi-details')">Hide</a>
+						</div>
+					</div>
+				</article>
+										
+
+				<article>
+					<header>
+						<span class="date">19 November 2024</span>
+						<h2>Idea to Start Up: <br />Be the Tech Leader of Tomorrow</h2>
+					</header>
+					<div class="image-box">
+						<a href="#" class="image fit"><img src="sharing FYE.jpg" alt="Idea to Start Up Image 1" /></a>
+						<a href="#" class="image fit"><img src="FYE ppt.jpg" alt="Idea to Start Up Image 2" /></a>
+					</div>
+					<p>On November 19th, I attended an inspiring session where YBrs. Mr. Arif Tukiman, CEO of RunCloud, shared his remarkable journey from being a student to becoming a successful CEO.</p>
+					<div class="button-center">
+						<a id="tech-btn" href="javascript:void(0);" class="button" onclick="toggleContent('tech-btn', 'tech-details')">Full Story</a>
+					</div>
+					<div id="tech-details" class="content">
+						<p>The session also included a sharing segment from the FYE (First Year Experience) module, focusing on effective reading, note-taking, and memorization skills. 
+						   Additionally, we were introduced to UTM’s support systems, including ICT services, facilities, welfare programs, and initiatives designed to help new students acclimate to the campus environment.</p>
+						<div class="button-center">
+							<a id="tech-hide-btn" href="javascript:void(0);" class="button" onclick="toggleContent('tech-btn', 'tech-details')">Hide</a>
+						</div>
+					</div>
+					
+				</article>
+
+				<article>
+					<header>
+						<span class="date">17 December 2024</span>
+						<h2>Industry Visit: <br/> UTM Digital</h2>
+					</header>
+					<div class="image-box">
+						<a href="#" class="image fit"><img src="utm digital.png" alt="utm digital Image 1" /></a>
+						<a href="#" class="image fit"><img src="utm digital 2.png" alt="utm digital Image 2" /></a>
+					</div>
+					<p>On December 17th, our section had the opportunity to visit UTM Digital. During the visit, we toured the UTM Digital premises and attended a talk titled "UTM Digital Driver,"
+						 presented by four speakers: Puan Aruslin binti Abdullah, Encik Mohd Rizam bin Sarman, Encik Azmi bin Kamis, and Ts. Raziman bin Zakaria. The speakers provided an insightful pitch on UTM Digital's services, digital infrastructure, information systems, and system development, with Puan Azniza binti Ali moderating the session.</p>
+					<div class="button-center">
+						<a id="digital-btn" href="javascript:void(0);" class="button" onclick="toggleContent('digital-btn', 'digital-details')">Full Story</a>
+					</div>
+					<div id="digital-details" class="content">
+						<p>The session was interactive, with attendees eagerly asking questions in exchange for free gifts, creating an engaging and lively atmosphere. 
+							We learned a great deal about UTM Digital's operations, which was both informative and inspiring. After the talk, we visited their open office, where we saw cutting-edge technology in action. We also had the opportunity to interview some of the staff members, and these interviews were recorded as part of our video documentation. The staff shared valuable insights about their roles and experiences at UTM Digital, further enriching our understanding of the company's operations and culture. These interviews will be an important addition to our project, providing a firsthand perspective on the innovative work happening at UTM Digital.
+							The friendly staff introduced us to the office environment and explained the innovative work they do. 
+							It was truly a wonderful and enriching day.
+						</p>
+						<div class="button-center">
+							<a id="digital-hide-btn" href="javascript:void(0);" class="button" onclick="toggleContent('digital-btn', 'digital-details')">Hide</a>
+						</div>
+					</div>
+					
+				</article>
+
+                <article>
+					<header>
+						<span class="date">23 December 2024</span>
+						<h2>Industry Talk: <br/> Skills in University and Industry</h2>
+					</header>
+					<div class="image-box">
+						<a href="#" class="image fit"><img src="industry talk.jpg" alt="talk Image 1" /></a>
+						<a href="#" class="image fit"><img src="industry talk2.jpg" alt="talk Image 2" /></a>
+					</div>
+					<p>On 23 December 2024, our faculty organized an industry talk titled Skills in University and Industry, featuring two speakers: Encik Mohd Hakimi Iqmall (Project Manager/System Analyst) and Encik Nik Mohd Habibullah Bin Nik Mohd Nizam. 
+                        Encik Hakimi delivered a session titled Designing Success: From Graphic Multimedia to Leading Projects, while Encik Nik hosted Preparing for Entrepreneurship in IT: Essential Skills and Strategies for University Students.</p>
+					<div class="button-center">
+						<a id="talk-btn" href="javascript:void(0);" class="button" onclick="toggleContent('talk-btn', 'talk-details')">Full Story</a>
+					</div>
+					<div id="talk-details" class="content">
+						<p>Encik Hakimi, currently working at UTM Digital as a Project Manager and System Analyst, oversees various projects, including the Welfare Services System, Clinic Panel System, Kenaikan Gaji Tahunan (KGT), Payroll 2.0, SSPA System, and Integrity System.
+                           He emphasized that achieving success in the IT field requires a combination of a strong technical foundation and comprehensive management skills. These skills are essential for aligning stakeholder expectations, mitigating risks, ensuring quality assurance, and maintaining project coherence. 
+                           Encik Hakimi highlighted the importance of continuous learning, particularly in mastering emerging technologies, to stay aligned with industry trends and meet client demands. 
+                           He encouraged individuals to identify their career interests and step beyond their comfort zones to foster personal growth, drive innovation, and adapt to the rapidly evolving IT landscape.
+
+                            <br>Encik Nik, the CEO of Micro Semiconductor Sdn. Bhd., introduced GetMe Hired, a platform he co-founded to support fresh graduates in creating professional CVs and enhancing their employability. He concluded that success in IT and related fields requires a clear career vision, a commitment to lifelong learning, and continuous skill development.
+                             Mastery of role-specific competencies, coupled with the strategic use of tools like Lucidchart for system modeling, Microsoft Project for project management, and Adobe Creative Suite for design, is essential for building a robust technical foundation. 
+                             By integrating these tools with thoughtful planning and a proactive mindset, individuals can effectively adapt to industry demands and achieve sustained professional growth.
+                                      
+						</p>
+						<div class="button-center">
+							<a id="talk-hide-btn" href="javascript:void(0);" class="button" onclick="toggleContent('talk-btn', 'talk-details')">Hide</a>
+						</div>
+					</div>
+					
+				</article>
+
+            </section>
+        </div>
+    </div>
+
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
