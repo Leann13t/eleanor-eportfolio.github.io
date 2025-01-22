@@ -243,13 +243,13 @@
 					function viewPDF1() {
 						const iframe = document.getElementById('pdfViewer1');
 						iframe.style.display = 'block';
-						iframe.src = 'assets/pdf/Assignment%201%20Flowchart.pdf';
+						iframe.src = 'assets/pdf/Lab%20Exercise%201_Eleanor%20Ting_A24CS0247.pdf';
 					}
 				
 					function downloadPDF1() {
 						const link = document.createElement('a');
-						link.href = 'assets/pdf/Assignment%201%20Flowchart.pdf';
-						link.download = 'Assignment 1 Flowchart.pdf';
+						link.href = 'assets/pdf/Lab%20Exercise%201_Eleanor%20Ting_A24CS0247.pdf';
+						link.download = 'Lab Exercise 1.pdf';
 						link.click();
 					}
 				
@@ -257,13 +257,13 @@
 					function viewPDF2() {
 						const iframe = document.getElementById('pdfViewer2');
 						iframe.style.display = 'block';
-						iframe.src = 'assets/pdf/Lab%20Eercise%201_Eleanor%20Ting_A24CS0247.pdf';
+						iframe.src = 'assets/pdf/Assignment%201%20Flowchart.pdf';
 					}
 				
 					function downloadPDF2() {
 						const link = document.createElement('a');
-						link.href = 'assets/pdf/Lab%20Eercise%201_Eleanor%20Ting_A24CS0247.pdf';
-						link.download = 'Lab Exercise 1.pdf';
+						link.href = 'assets/pdf/Assignment%201%20Flowchart.pdf';
+						link.download = 'Assignment 1 Flowchart.pdf';
 						link.click();
 					}
 
@@ -273,7 +273,7 @@
         txtViewer.style.display = 'block';
         
         // Fetch and display the content of the .txt file
-        fetch('assets/txt/Assignment1_LabExercise.txt')
+        fetch('assets/pdf/LE2_Eleanor_Ting.txt')
             .then(response => {
                 if (!response.ok) {
                     throw new Error('Network response was not ok');
@@ -290,8 +290,8 @@
 
     function downloadTXT1() {
         const link = document.createElement('a');
-        link.href = 'assets/txt/Assignment1_LabExercise.txt';
-        link.download = 'Assignment1_LabExercise.txt';
+        link.href = 'assets/pdf/LE2_Eleanor_Ting.txt';
+        link.download = 'Lab Exercise 2.txt';
         link.click();
     }
 				</script>
