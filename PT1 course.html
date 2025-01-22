@@ -238,6 +238,42 @@
 						<pre id="txtViewer2" style="display:none; width: 600px; height: 400px; overflow: auto; background-color: #f4f4f9; padding: 10px; border: 1px solid #ccc; border-radius: 8px;"></pre>
 					</div>
 				</div>
+
+				<div class="post-container">
+					<header>
+						<img src="" alt="Assignment 2">
+						<h2>Assignment 2</h2>
+					</header>
+					<button onclick="viewTXT3()">View TXT</button>
+					<button onclick="downloadTXT3()">Download TXT</button>
+					<div id="txtContainer3" style="margin-top: 20px;">
+						<pre id="txtViewer3" style="display:none; width: 600px; height: 400px; overflow: auto; background-color: #f4f4f9; padding: 10px; border: 1px solid #ccc; border-radius: 8px;"></pre>
+					</div>
+				</div>
+	
+				<div class="post-container">
+					<header>
+						<img src="" alt="Assignment 3">
+						<h2>Assignment 3</h2>
+					</header>
+					<button onclick="viewTXT4()">View TXT</button>
+					<button onclick="downloadTXT4()">Download TXT</button>
+					<div id="txtContainer4" style="margin-top: 20px;">
+						<pre id="txtViewer4" style="display:none; width: 600px; height: 400px; overflow: auto; background-color: #f4f4f9; padding: 10px; border: 1px solid #ccc; border-radius: 8px;"></pre>
+					</div>
+				</div>
+
+				<div class="post-container">
+					<header>
+						<img src="" alt="Lab Exercise 4">
+						<h2>Lab Exercise 4</h2>
+					</header>
+					<button onclick="viewTXT5()">View TXT</button>
+					<button onclick="downloadTXT5()">Download TXT</button>
+					<div id="txtContainer5" style="margin-top: 20px;">
+						<pre id="txtViewer5" style="display:none; width: 600px; height: 400px; overflow: auto; background-color: #f4f4f9; padding: 10px; border: 1px solid #ccc; border-radius: 8px;"></pre>
+					</div>
+				</div>
 	
 	
 <!-- Return Button -->
@@ -280,8 +316,8 @@
 						link.click();
 					}
 
-		//Lab Exercise 2
-		function viewTXT1() {
+   //Lab Exercise 2
+   function viewTXT1() {
         const txtViewer = document.getElementById('txtViewer1');
         txtViewer.style.display = 'block';
         
@@ -306,6 +342,118 @@
         link.href = 'assets/pdf/LE2_Eleanor_Ting.txt';
         link.download = 'Lab Exercise 2.txt';
         link.click();
+    }
+
+	//Lab Exercise 3
+	function viewTXT2() {
+        const txtViewer = document.getElementById('txtViewer2');
+        txtViewer.style.display = 'block';
+        
+        // Fetch and display the content of the .txt file
+        fetch('assets/pdf/LE3_Eleanor%20Ting_A24CS0247.txt')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.text();
+            })
+            .then(data => {
+                txtViewer.textContent = data; // Display the text content inside <pre>
+            })
+            .catch(error => {
+                txtViewer.textContent = "Error loading the file: " + error.message;
+            });
+    }
+
+    function downloadTXT2() {
+        const link = document.createElement('a');
+        link.href = 'assets/pdf/LE3_Eleanor%20Ting_A24CS0247.txt';
+        link.download = 'Lab Exercise 3.txt';
+        link.click();
+    }
+
+	//Assignment 2
+	function viewTXT3() {
+        const txtViewer = document.getElementById('txtViewer3');
+        txtViewer.style.display = 'block';
+        
+        // Fetch and display the content of the .txt file
+        fetch('assets/pdf/Assignment%202_Eleanor%20Ting_Wong%20Zi%20Ning.txt')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.text();
+            })
+            .then(data => {
+                txtViewer.textContent = data; // Display the text content inside <pre>
+            })
+            .catch(error => {
+                txtViewer.textContent = "Error loading the file: " + error.message;
+            });
+    }
+
+    function downloadTXT3() {
+        const link = document.createElement('a');
+        link.href = 'assets/pdf/Assignment%202_Eleanor%20Ting_Wong%20Zi%20Ning.txt';
+        link.download = 'Assignment 2.txt';
+        link.click();
+    }
+
+	//Assignment 3
+	function viewTXT4() {
+        const txtViewer = document.getElementById('txtViewer4');
+        txtViewer.style.display = 'block';
+        
+        // Fetch and display the content of the .txt file
+        fetch('assets/pdf/Assignment%203_Eleanor%20Ting_Wong%20Zi%20Ning.txt')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.text();
+            })
+            .then(data => {
+                txtViewer.textContent = data; // Display the text content inside <pre>
+            })
+            .catch(error => {
+                txtViewer.textContent = "Error loading the file: " + error.message;
+            });
+    }
+
+    function downloadTXT4() {
+        const link = document.createElement('a');
+        link.href = 'assets/pdf/Assignment%203_Eleanor%20Ting_Wong%20Zi%20Ning.txt';
+        link.download = 'Assignment 3.txt';
+        link.click();
+    }
+
+	//Lab Exercise 4
+	function viewTXT5() {
+        const txtViewer = document.getElementById('txtViewer5');
+        txtViewer.style.display = 'block';
+        
+        // Fetch and display the content of the .txt file
+        fetch('assets/pdf/Assignment%203_Eleanor%20Ting_Wong%20Zi%20Ning.txt')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.text();
+            })
+            .then(data => {
+                txtViewer.textContent = data; // Display the text content inside <pre>
+            })
+            .catch(error => {
+                txtViewer.textContent = "Error loading the file: " + error.message;
+            });
+    }
+
+    function downloadTXT5() {
+        const link = document.createElement('a');
+        link.href = 'assets/pdf/Assignment%203_Eleanor%20Ting_Wong%20Zi%20Ning.txt';
+        link.download = 'Lab Exercise 4.txt';
+		link.click();
     }
 				</script>
 				
