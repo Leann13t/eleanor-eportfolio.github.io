@@ -1,0 +1,133 @@
+//NAME: ELEANOR TING PIK EN   MATRIC NUMBER:A24CS0247
+//Lab Exercise 4
+//Date: 16 Jan 2025
+
+
+#include <iostream>
+#include <fstream>
+#include <string>
+#include <iomanip>
+#define NUMOFBRAND 10
+#define NUMOFYEAR 4
+using namespace std;
+
+// Task 1: Define the Sales structure
+struct Sales {
+    string brand;
+    float percentages[NUMOFYEAR];
+    float average;
+};
+
+// Function Prototypes
+void calculateAverage(Sales[]);
+int findLowest(Sales[]);
+int findHighest(Sales[]);
+void displayOutput(Sales[]);
+void displayLine();
+
+// Task 6: Main function
+int main()
+{
+    Sales brands[NUMOFBRAND];
+
+    // Open the input file
+    ifstream inp("InputQ2.txt");
+    if (!inp) {
+        cerr << "Error: Unable to open the file." << endl;
+        return 1;
+    }
+
+    // Read data from the file
+    for (int i = 0; i < NUMOFBRAND; i++) {
+        for (int j = 0; j < NUMOFYEAR; j++) {
+            inp >> brands[i].percentages[j];
+        }
+        inp.ignore(); // Ignore leftover newline
+        getline(inp, brands[i].brand); // Read brand name
+    }
+    inp.close();
+
+    // Calculate averages
+    calculateAverage(brands);
+
+    // Display the output
+    displayOutput(brands);
+
+    return 0;
+}
+
+// Task 2: Function to calculate averages
+void calculateAverage(Sales sales[])
+{
+    for (int i = 0; i < NUMOFBRAND; i++) {
+        float sum = 0;
+        for (int j = 0; j < NUMOFYEAR; j++) {
+            sum += sales[i].percentages[j];
+        }
+        sales[i].average = sum / NUMOFYEAR;
+    }
+}
+
+// Task 3: Function to find the lowest average
+int findLowest(Sales sales[])
+{
+    double lowestPercentage = sales[0].average;
+    int lowestBrand=0;
+    for (int i = 0; i < NUMOFBRAND; i++) {
+        if (sales[i].average < sales[lowestBrand].average) {
+            lowestPercentage= sales[i].average;
+            lowestBrand=i;
+        }
+    }
+    return lowestBrand;
+}
+
+// Task 4: Function to find the highest average
+int findHighest(Sales sales[])
+{
+    double highestPercentage = sales[0].average;
+    int highestBrand=0;
+    for (int i = 0; i < NUMOFBRAND; i++) {
+        if (sales[i].average > sales[highestBrand].average) {
+            highestPercentage= sales[i].average;
+            highestBrand=i;
+        }
+    }
+    return highestBrand;
+}
+
+// Task 5: Function to display the output
+void displayOutput(Sales sales[])
+{
+    cout << "Percentage of Sales by Brand (2016 to 2019)\n";
+    displayLine();
+    cout << left << setw(15) << "BRAND" << setw(7) << "2016" << setw(7) << "2017"
+         << setw(7) << "2018" << setw(7) << "2019" << "AVERAGE" << endl;
+    displayLine();
+
+    for (int i = 0; i < NUMOFBRAND; i++) {
+        cout << left << setw(15) << sales[i].brand;
+        for (int j = 0; j < NUMOFYEAR; j++) {
+            cout << setw(7) << fixed << setprecision(1) << sales[i].percentages[j];
+        }
+        cout << fixed << setprecision(2) << sales[i].average << endl;
+    }
+
+    displayLine();
+    int lowestBrand = findLowest(sales);
+    int highestBrand = findHighest(sales);
+    cout << "Lowest Average of Sales Percentage: " << sales[lowestBrand].average << " - "
+         << sales[lowestBrand].brand << endl;
+    cout << "Highest Average of Sales Percentage: " << sales[highestBrand].average << " - "
+         << sales[highestBrand].brand << endl;
+    displayLine();
+}
+
+// Utility function to display a line
+void displayLine()
+{
+    for (int i = 0; i < 60; i++) {
+        cout << "-";
+    }
+    cout << endl;
+}
