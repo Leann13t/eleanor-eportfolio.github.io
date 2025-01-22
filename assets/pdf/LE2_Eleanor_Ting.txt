@@ -1,0 +1,268 @@
+Lab Exercise 2
+Name: Eleanor Ting
+Matrics No: A24CS0247
+Date: 14/11/2024
+
+
+
+Question 1:
+#include <iostream>
+using namespace std;
+int main()
+{ 
+  int age;
+  cout<<"Enter your age:";
+  cin>>age;
+ if (age>=0&&age<=12)
+ cout<<"Your category is Child"<<endl;
+ else if (age>=13&&age<=17)
+ cout<<"Your category is Teenager"<<endl;
+ else if (age>=18&&age<=64)
+ cout<<"Your category is Adult"<<endl;
+ else if (age>=65)
+ cout<<"Your category is Senior"<<endl;
+ else;
+ return 0;
+}
+
+Question 2:
+#include <iostream>
+using namespace std;
+int main()
+{
+	int x;
+	cout<<"Enter a number(1 to 7):";
+	cin>>x;
+	switch (x)
+	{
+	case(1):cout<<"Today is Sunday";
+	break;
+	case(2):cout<<"Today is Monday";
+	break;
+	case(3):cout<<"Today is Tuesday";
+	break;
+	case(4):cout<<"Today is Wednesday";
+	break;
+	case(5):cout<<"Today is Thursday";
+	break;
+	case(6):cout<<"Today is Friday";
+	break;
+	case(7):cout<<"Today is Saturday";
+	break;
+	default: cout<<"Invalid Input";
+	break;
+}
+
+	return 0;
+}
+
+Question 3:
+#include <iostream>
+#include <string>
+using namespace std;
+int main()
+{
+	int x;
+    string member;
+
+	cout<<"Enter customer type (Gold or Regular):";
+	cin>> member;
+  if (member=="Gold")
+    {
+        cout << "Enter total purchase amount: ";
+        cin >> x;
+
+        if (x>=1000)
+        {
+		    x *= 0.5;
+		    cout<<"Discount:50%"<<endl;
+            cout<<"Final price after discount: RM"<<x;
+        }
+        else if (x >= 500 && x <= 999)
+        {
+            x *= 0.6;
+            cout<<"Discount:40%"<<endl;
+            cout<<"Final price after discount: RM"<<x;
+        }
+        else if (x>=200&&x<=499)
+        {
+            x*=0.75;
+             cout<<"Discount:25%"<<endl;
+             cout<<"Final price after discount: RM"<<x;
+        }
+        else if (x <= 200&& x>0)
+        {
+            x *= 0.9;
+            cout<<"Discount:10%"<<endl;
+            cout<<"Final price after discount: RM" << x;
+        }
+        else
+        {
+            cout<<"Invalid purchase amount";  	  
+        }
+      
+    }
+    
+    else if (member=="Regular")
+    {
+        cout<<"Enter your total purchase amount: ";
+        cin>>x;
+
+        if (x>=1000)
+        {
+	
+            x *=0.6;
+           cout<<"Discount:40%"<<endl;
+           cout <<"Final price after discount: RM"<< x;
+       }
+        else if (x>=500 && x<=999)
+        {
+
+            x *=0.7;
+            cout<<"Discount:30%"<<endl;
+            cout << "Final price after discount: RM" << x; 
+        }
+         else if (x>=200&&x<=499)
+         {
+            x*=0.85;
+            cout<<"Discount:15%"<<endl;
+            cout << "Final price after discount: RM" << x;
+         }
+        else if (x <= 200 &&x>0)
+        {
+            x *= 0.95;
+            cout<<"Discount:5%"<<endl;
+             cout <<"Final price after discount: RM" << x;
+         }
+        else 
+        {
+            cout <<"Invalid purchase amount";
+        }
+        
+    }
+    else
+    {
+        cout <<"Invalid member entered\n";
+    }
+
+    return 0;
+}
+
+Question 4:
+#include <iostream>
+using namespace std;
+int main ()
+{
+	int x, n;
+	cout<<"Enter an integer:";
+	cin>>n;
+	for (x=1;x<=n;x++)
+	{
+		cout<<x<<endl;
+	}
+	return 0;
+}
+
+Question 5:
+#include <iostream>
+using namespace std;
+int main()
+{
+	int x;
+	cout<<"Enter the correct password:";
+	cin>>x;
+	while (x!=1234)
+	{
+		cout<<"The password is incorrect!Re-enter again:";
+		cin>>x;
+	}
+	cout<<"Access granted!";
+	return 0;
+}
+
+Question 6:
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    char A[20];
+    
+    do
+    {
+        cout<<"Do you want to continue? (Enter 'y' to continue or 'n' to stop):";
+        cin >> A;
+
+        if (A[0]=='n')
+        {
+            cout << "Program Terminated." << endl;
+            break;
+        }
+        else if (A[0]!='y' && A[0]!='n')
+        {
+            cout << "Invalid input! Enter 'y' or 'n' next time.\n";
+        }
+
+    } while (A[0] == 'y');
+
+    return 0;
+}
+
+Question 7:
+#include <iostream>
+using namespace std;
+int main()
+{ 
+    int points;
+    char A;
+    cout<<"Enter your current loyalty points:";
+    cin>>points;
+    do
+    {
+    	if (points>=100 && points<=499)
+    {
+        cout <<"Discount=5%\n";
+        points =points- 100;
+       
+    }
+    else if (points>=500 && points<=999)
+    {
+        cout <<"Discount=10%\n";
+        points =points- 500;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
+      
+    }
+    else if (points>=1000)
+    {
+        cout <<"Discount=15%\n";
+        points =points- 1000;
+       
+    }
+	 else if (points<100&&points>0)
+	 {
+	 	cout<<"Insufficient points to redeem. You need at least 100 points."<<endl;
+	 	break;
+	 }
+	 else
+	 {
+	 	cout<<"Cannot read your points. Please enter a valid number!"<<endl;
+	 	break;
+	 }
+	   cout<<"Remaining points:"<<points<<endl;
+	   if (points<100)
+	   {
+	   	cout<<"Insufficient points to continue redeeming."<<endl;
+	   	break;
+	   }
+	   cout<<"Do you want to redeem more points?(y/n):";
+	   cin>>A;
+	  	
+      if (A!='y'&&A!='n')
+	{
+		cout<<"Error!Please enter 'y' or 'n' next time.\n";
+	
+	}
+	}while(A=='y');
+	
+	cout<<"Thank you for using the loyalty points redemption program!";
+	return 0;
+}
