@@ -115,6 +115,16 @@ article {
     display: block; /* Ensure the image is treated as a block-level element */
 }
 
+.image-box a img {
+    outline: none; 
+    border: none;  
+}
+
+.image-box a:focus img {
+    outline: none; 
+}
+
+
 #intro-text {
     font-family: 'Nanum Pen Script', cursive; /* Replace with your desired font */
     font-size: 3rem; /* Adjust size as needed */
@@ -550,6 +560,38 @@ letter-spacing: 3px;
     transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 
+
+/* Center the project wrapper */
+.project-wrapper {
+    display: flex; /* Enable flexbox */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    min-height: 100vh; /* Full viewport height */
+    padding: 20px; /* Add padding for responsiveness */
+   
+}
+
+/* Project styling */
+.project {
+    text-align: center; /* Center align text */
+    max-width: 800px; /* Limit content width */
+    padding: 20px; /* Add padding inside the project */
+    background: #ffffff; /* Project background color */
+    border-radius: 10px; /* Rounded corners */
+}
+
+/* Styling for the video */
+.small-video {
+    width: 400px; /* Set video width */
+    height: 300px; /* Set video height */
+    border: 3px solid #2c3e50; /* Add a border */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add subtle shadow */
+    margin: 20px auto; /* Center the video inside the project */
+    display: block; /* Ensure proper layout */
+}
+
+
     </style>
     <script>
    function toggleContent(buttonId, contentId) {
@@ -777,6 +819,26 @@ document.addEventListener('DOMContentLoaded', revealOnScroll);
             </ul>
         </div>
     </div>
+
+<div class="project-wrapper">
+    <!-- Website Development -->
+    <div class="project">
+        <h2 class="big">Website Development - Ewa Workspace</h2>
+        <iframe 
+            src="https://drive.google.com/uc?id=12WBbHVDkdZ7iqdHo7DRuey7rDdm5xoBo" 
+            class="small-video" 
+            allow="autoplay" 
+            frameborder="0">
+        </iframe>
+        <p>
+            In November 2024, my teammates Angela, Zi Ning, and I worked on a website project called <strong>Ewa Workspace</strong>. 
+            The website focuses on enhancing online working experiences with features such as chat functionality, moment sharing, 
+            and a virtual workspace to communicate with colleagues. Users can check if their colleagues are online, interact with them, 
+            and make the work-from-home (WFH) environment less isolating and more engaging.
+        </p>
+    </div>
+</div>
+
 </section>
 </section>
    
