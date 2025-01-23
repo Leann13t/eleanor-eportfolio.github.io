@@ -205,6 +205,14 @@ a img:hover {
     text-align: center; 
     margin-bottom: 15px; 
 }
+.skills-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
 .new.container{
    position: relative;
    display: flex;
@@ -213,7 +221,15 @@ a img:hover {
    flex-wrap: wrap;
    gap:40px;
 }
-.skills h1{
+
+.hard-skills {
+    flex: 3;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: flex-start;
+}
+.skills h2{
     text-align: center;
 }
 .progress
@@ -274,23 +290,24 @@ a img:hover {
     background:var(--clr);
     transform: rotate(calc(((var(--i) - 50) * 0.01turn )));
 }
-.soft.skills{
+
+.soft-skills {
+    flex: 2;
     list-style: none;
-   height: auto;
+   padding: 0;
     margin:0;
     width: 800px;
-    margin: 60px auto;
     color: #fff;
-    padding: 20px;
+
 }
-.soft.skills h1{
+.soft-skills h1{
     text-align: center;
 }
-.soft.skills h3{
+.soft-skills h3{
     margin: 5px;
 }
-.soft.skills li{
-margin:20px 0;
+.soft-skills li{
+margin:15px 0;
 padding:10px;
 }
 .bar{
@@ -378,6 +395,161 @@ padding:10px;
         width:70%;
     }
 }
+
+.education h2
+{
+text-align: center;
+font-weight: 100;
+letter-spacing: 3px;
+}
+.branch {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    margin-top: 50px;
+    counter-reset: step;
+}
+
+.branch li::before {
+    content: attr(data-year); /* Use the data attribute for the year */
+    width: 200px; 
+    height: 50px; /* Less round shape */
+    line-height: 50px;
+    border: 3px solid #ecf0f1;
+    display: block;
+    text-align: center;
+    margin: 0 auto 10px auto;
+    border-radius: 20px; /* Less rounded corners */
+    background-color: #ffffff;
+    font-size: 0.8em;
+    color: #08041d;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Add subtle shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transition effects */
+}
+
+.branch li:hover::before {
+    transform: scale(1.1); /* Slightly enlarge the circle on hover */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.4); /* Add a stronger shadow */
+}
+
+.branch li {
+    position: relative;
+    list-style-type: none;
+    float: left;
+    width: 33.33%;
+    text-align: center;
+    letter-spacing: 2px;
+    padding: 20px;
+    transition: background-color 0.3s ease-in-out; /* Add a smooth background transition */
+}
+
+.branch li:hover {
+    background: rgba(255, 255, 255, 0.8); /* Add a semi-transparent background on hover */
+    border-radius: 10px; /* Slightly rounded corners for the hover container */
+    color: #ecf0f1;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Elevate the container on hover */
+    cursor: pointer;
+}
+
+.branch li.study {
+    color: #87859a;
+    font-weight: bold;
+}
+
+.branch li.study:hover {
+    color: #04041d; /* Change text color on hover */
+    box-shadow: 0 4px 8px rgb(7, 9, 63), 0 6px 20px rgb(10, 10, 66); 
+    transform: translateY(-5px); 
+    transition: all 0.3s ease-in-out; 
+}
+
+.branch li.study:before {
+    
+    border-color: #0c0830;;
+}
+
+.branch li + li:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, #6ebdc9, #93d8b1, #ffffff); /* Initial gradient */
+    background-size: 300% 100%; /* Make the gradient wider for animation */
+    top: 25px;
+    left: -50%;
+    z-index: -1;
+    transition: background-color 0.3s ease-in-out;
+    animation: gradientMove 2s linear infinite; /* Add animation */
+}
+
+/* Keyframes for moving gradient */
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* When hovering on the next step, change line color */
+.branch li:hover + li:after {
+    background: linear-gradient(90deg, #f0faff, #add8e6, #f0faff); /* Slightly different gradient on hover */
+    background-size: 300% 100%;
+    animation: gradientMove 2s linear infinite; /* Maintain animation */
+}
+
+/* Remove connecting line for the first element */
+.branch li:first-child:after {
+    content: none;
+}
+
+
+
+.branch li:first-child:after {
+    content: none;
+}
+
+
+.big {
+    font-size: 2em;
+    opacity: 0;
+    animation: fadeIn 1.5s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Initial hidden state */
+.hidden {
+    opacity: 0;
+    transform: translateY(20px); /* Slightly move it down */
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* When visible */
+.visible {
+    opacity: 1;
+    transform: translateY(0); /* Reset position */
+}
+
+/* Example animation for the entire section */
+.section {
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
     </style>
     <script>
    function toggleContent(buttonId, contentId) {
@@ -421,6 +593,34 @@ padding:10px;
     typeText('sub-text', subText, 100);
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+    const bigElements = document.querySelectorAll('.big');
+
+    bigElements.forEach((element, index) => {
+        setTimeout(() => {
+            element.style.animationDelay = `${index * 0.5}s`;
+            element.classList.add('fade-in');
+        }, 200);
+    });
+});
+
+// Function to add 'visible' class when elements enter the viewport
+const revealOnScroll = () => {
+    const elements = document.querySelectorAll('.hidden');
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible'); // Add animation class
+                observer.unobserve(entry.target); // Stop observing once the effect is applied
+            }
+        });
+    });
+
+    elements.forEach(element => observer.observe(element));
+};
+
+document.addEventListener('DOMContentLoaded', revealOnScroll);
 
     </script>
 </head>
@@ -457,10 +657,10 @@ padding:10px;
                 <li><a href="elements.html">Reflection</a></li>
             </ul>
             <ul class="icons">
-                <li><a href="#" class="icon brands fa-linkedin"></a></li>
-                <li><a href="#" class="icon brands fa-facebook-f"></a></li>
-                <li><a href="#" class="icon brands fa-instagram"></a></li>
-                <li><a href="#" class="icon brands fa-github"></a></li>
+                <li><a href="https://www.linkedin.com/in/eleanor-ting-780937332/" class="icon brands fa-linkedin"></a></li>
+                <li><a href="https://www.facebook.com/elean.ting.9" class="icon brands fa-facebook-f"></a></li>
+                <li><a href="https://www.instagram.com/elea_north_o413/" class="icon brands fa-instagram"></a></li>
+                <li><a href="https://github.com/Leann13t" class="icon brands fa-github"></a></li>
             </ul>
         </nav>
 
@@ -471,7 +671,7 @@ padding:10px;
 <article class="post featured">
     <header class="major">
         <span class="date">Since April 13, 2005</span>
-        <h2>Profile</h2>
+        <h2 class="big">Profile</h2>
     </header>
     <div class="box-wrapper">
         <!-- Image -->
@@ -489,6 +689,7 @@ padding:10px;
             <div class="button-center">
                 <a id="know-more-btn" href="javascript:void(0);" class="button" onclick="toggleContent('know-more-btn', 'profile-details')">Know More</a>
             </div>
+
             <div id="profile-details" class="content" style="display: none;">
                 <p class="p2">I’m also actively involved in various clubs and extracurricular activities, which have enriched my university experience. One highlight of my journey so far is my involvement with the UTM Hanfu Club, where I participated in the opening gathering wearing a traditional Hanfu. This experience was truly unique and meaningful to me, and it’s the reason I chose this special photo as my profile picture—it represents a celebration of culture, community, and new experiences.
 
@@ -500,70 +701,87 @@ padding:10px;
                 </div>
             </div>
         </div>
+ 
+       
     </div>
 </article>
- <section>
+<section>
+    <section class="hidden">
+    <div class="education">
+        <h2 class="big">Education</h2>
+        <ul class="branch">
+            <li class="study" data-year="2012-2017">
+                Primary School<br><b>SJK(C) Tung Hua</b>
+            </li>
+            <li class="study" data-year="2018-2022/2023">
+                Secondary School<br><b>SMK St. Elizabeth</b>
+            </li>
+            <li class="study" data-year="2023-2024">
+                Foundation<br><b>Universiti Teknologi Malaysia, Johor</b>
+            </li>
+            <li class="study" data-year="2024/2025-Current">
+                Bachelor of Degree in Computer Science (Bioinformatics)<br><b>Universiti Teknologi Malaysia, Johor</b>
+            </li>
+        </ul>
+    </div>
+
     <div class="skills">
-        <h1>Hard Skills</h1>
+        <h2 class="big">Skills</h2>
+        <div class="skills-container">
+            <!-- Hard Skills -->
+            <div class="hard-skills">
+                <div class="progress" style="--i:60; --clr:#43f94a;">
+                    <h3>60<span>%</span></h3>
+                    <h4>C++</h4>
+                </div>
+                <div class="progress" style="--i:40; --clr:#2ccde9;">
+                    <h3>40<span>%</span></h3>
+                    <h4>HTML</h4>
+                </div>
+                <div class="progress" style="--i:30; --clr:#fb297b;">
+                    <h3>30<span>%</span></h3>
+                    <h4>JavaScript</h4>
+                </div>
+                <div class="progress" style="--i:30; --clr:#4b2070;">
+                    <h3>30<span>%</span></h3>
+                    <h4>React</h4>
+                </div>
+                <div class="progress" style="--i:20; --clr:#e1f90f;">
+                    <h3>20<span>%</span></h3>
+                    <h4>Firebase</h4>
+                </div>
+            </div>
+
+            <!-- Soft Skills -->
+            <ul class="soft-skills">
+                <li>
+                    <h3>Communication</h3>
+                    <span class="bar"><span class="communication"></span></span>
+                </li>
+                <li>
+                    <h3>Team Collaboration</h3>
+                    <span class="bar"><span class="team"></span></span>
+                </li>
+                <li>
+                    <h3>Problem Solving</h3>
+                    <span class="bar"><span class="problems"></span></span>
+                </li>
+                <li>
+                    <h3>Critical Thinking</h3>
+                    <span class="bar"><span class="thinking"></span></span>
+                </li>
+                <li>
+                    <h3>Creativity</h3>
+                    <span class="bar"><span class="creativity"></span></span>
+                </li>
+            </ul>
+        </div>
     </div>
-    <div class="new container">
-    <div class="progress" style="--i:60;--clr:#43f94a;">
-        <h3>
-            60<span>%</span>
-        </h3>
-        <h4>C++</h4>
-    </div>
-    <div class="progress" style="--i:40;--clr:#2ccde9;">
-        <h3>
-            40<span>%</span>
-        </h3>
-        <h4>HTML</h4>
-    </div>
-    <div class="progress" style="--i:30;--clr:#fb297b;">
-        <h3>
-            30<span>%</span>
-        </h3>
-        <h4>JavaScript</h4>
-    </div>
-    <div class="progress" style="--i:30;--clr:#4b2070;">
-        <h3>
-            30<span>%</span>
-        </h3>
-        <h4>React</h4>
-    </div>
-    <div class="progress" style="--i:20;--clr:#e1f90f;">
-        <h3>
-            20<span>%</span>
-        </h3>
-        <h4>Firebase</h4>
-    </div>
-   </div>
-   <div class="soft skills">
-    <h1>Soft Skills</h1>
-    <li>
-        <h3>Communication</h3>
-        <span class="bar"><span class="communication"></span></span>
-    </li>
-    <li>
-        <h3>Team Collaboration</h3>
-        <span class="bar"><span class="team"></span></span>
-    </li>
-    <li>
-        <h3>Problem Solving</h3>
-        <span class="bar"><span class="problems"></span></span>
-    </li>
-    <li>
-        <h3>Critical Thinking</h3>
-        <span class="bar"><span class="thinking"></span></span>
-    </li>
-    <li>
-        <h3>Creativity</h3>
-        <span class="bar"><span class="creativity"></span></span>
-    </li>
-   </div>
-   </section>
+</section>
+</section>
    
             <!-- Posts -->
+         
             <section class="posts">
                 <article>
                     <header>
@@ -744,6 +962,7 @@ padding:10px;
             </section>
         </div>
     </div>
+
 
 
 		<!-- Scripts -->
