@@ -213,6 +213,18 @@
 				</p>
 				</div>
 
+				<div class="post-container">
+					<header>
+						<img src="lab2.jpg" alt="Lab 2">
+						<h2>Digital Logic Project: Network Packet Transmission Monitoring System </h2>
+					</header>
+					<button onclick="viewPDF2()">View PDF</button>
+					<button onclick="downloadPDF2()">Download PDF</button>
+					<div id="pdfContainer2" style="margin-top: 20px;">
+						<iframe id="pdfViewer2" width="600" height="400" style="display:none;"></iframe>
+					</div>
+				</div>
+
 <!-- Return Button -->
 <br>
     <button onclick="window.location.href='generic.html';" 
@@ -239,7 +251,20 @@
 						link.click();
 					}
 				
-					
+						//  DL Project
+						function viewPDF2() {
+						const iframe = document.getElementById('pdfViewer2');
+						iframe.style.display = 'block';
+						iframe.src = 'assets/pdf/Report%20Project%20DL.pdf';
+					}
+				
+					function downloadPDF2() {
+						const link = document.createElement('a');
+						link.href = 'assets/pdf/Report%20Project%20DL.pdf';
+						link.download = 'Project Digital Logic.pdf';
+						link.click();
+					}
+				
 				</script>
 				
 		<!-- Scripts -->
