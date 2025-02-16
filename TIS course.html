@@ -216,13 +216,13 @@
     <header>
         <h2>Design Thinking Video</h2>
     </header>
-	<div id="videoContainer1" style="margin-top: 20px;">
-        <video width="600" height="400" controls>
-			<source src="Group 1.mp4" type="video/mp4">
-			Your browser does not support the video tag.
-		</video>
+    <div id="videoContainer1" style="margin-top: 20px;">
+		<iframe src="https://drive.google.com/file/d/1eaC7TZ2Wnt-1FUlJSS3jPz2pTVr24xZG/preview" 
+		width="600" height="400" allow="autoplay"></iframe>
+
     </div>
 </div>
+
 
 <!-- Assignment 2: Industry Visit Video Section -->
 <div class="post-container">
@@ -238,6 +238,20 @@
             allowfullscreen>
         </iframe>
     </div>
+</div>
+
+<!-- Assignment 4:Newsletter Industry Talk -->
+<div class="post-container">
+	<header>
+		<img src="industry talk.jpg" alt="talk">
+		<img src="industry talk2.jpg" alt="talk2">
+		<h2>Assignment 4: Academic NEWSLETTER on Industrial Talk </h2>
+	</header>
+	<button onclick="viewPDF4()">View PDF</button>
+	<button onclick="downloadPDF4()">Download PDF</button>
+	<div id="pdfContainer4" style="margin-top: 20px;">
+		<iframe id="pdfViewer4" width="600" height="400" style="display:none;"></iframe>
+	</div>
 </div>
 
 <!-- Return Button -->
@@ -294,6 +308,20 @@
 						link.click();
 					}
 					
+                    //Industry Talk PDF
+                    function viewPDF4() {
+						const iframe = document.getElementById('pdfViewer4');
+						iframe.style.display = 'block';
+						iframe.src = 'assets/pdf/Assignment%204-NEWSLETTER.pdf';
+                     }
+				
+					function downloadPDF4() {
+						const link = document.createElement('a');
+						link.href = 'aassets/pdf/Assignment%204-NEWSLETTER.pdf';
+						link.download = 'Assignment 4 Newsletter.pdf';
+						link.click();
+					}
+
 				</script>
 				
 		<!-- Scripts -->
